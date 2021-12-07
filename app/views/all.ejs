@@ -1,0 +1,12 @@
+<%- include("partials/header") %>
+<div>ALL</div>
+
+<% for (const person of coordinates) { %> 
+
+    <div>Cette personne s'appelle <%=person.name%> </div>
+        <div>son numero de telephone est <%=person.telephone%></div>
+        <div>et habite <%=person.adresse%></div>
+        <div>--------</div>
+<% } %> 
+
+<%- include("partials/footer") %>
