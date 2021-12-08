@@ -1,9 +1,8 @@
 <%- include("partials/header") %>
     <h1>land page</h1>
-    <div ><a href="/coordinate/patrick">Patrick</a></div>
-    <div ><a href="/coordinate/benedicte">Benedicte</a></div>
-    <div ><a href="/coordinate/camille">Camille</a></div>
-    <div ><a href="/coordinate/bastien">Bastien</a></div>
+    <% for (let coordinate of coordinates){ %>
+        <div ><a href="/coordinate/<%=coordinate.name%>"><%=coordinate.name%></a></div>
+    <% } %>
     <div>------------------------</div>
     <div ><a href="/all">All</a></div>
 <%- include("partials/footer") %>

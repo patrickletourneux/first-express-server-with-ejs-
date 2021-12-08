@@ -3,7 +3,10 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/",(req,res)=>{
-    res.render("index");
+    const coordinates = require("./data/coordinates");
+    res.render("index",{
+        coordinates:coordinates
+    });
 });
 
 router.get("/all",(req,res)=>{
