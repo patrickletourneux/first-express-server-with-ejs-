@@ -3,34 +3,43 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/",(req,res)=>{
+    const pixel = false;
     const coordinates = require("./data/coordinates");
     res.render("index",{
-        coordinates:coordinates
+        coordinates:coordinates,
+        pixel
     });
 });
 
 router.get("/all",(req,res)=>{
+    const pixel = false;
     const coordinates = require("./data/coordinates");
     console.log('all')
     res.render("all",{
-        coordinates:coordinates
+        coordinates:coordinates,
+        pixel
     });
 });
 
-router.get("/morpion",(req,res)=>{
+router.get("/pixel",(req,res)=>{
+    const pixel = true;
     // jeu a integrer
-    console.log('morpion')
-    res.render("morpion");
+    console.log('pixel')
+    res.render("pixel",{
+        pixel
+    });
 });
 
 
 router.get("/coordinate/:name",(req,res)=>{
+    const pixel = false;
     const coordinates = require("./data/coordinates");
     const coordinate = coordinates.find(coordinate => coordinate.name.toLowerCase() == req.params.name.toLowerCase());
     console.log(coordinate);
     if (coordinate){
         res.render("person",{
-            coordinate:coordinate
+            coordinate:coordinate,
+            pixel
         });
     } else{
         res.sendStatus(404);
