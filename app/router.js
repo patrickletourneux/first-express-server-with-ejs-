@@ -17,6 +17,12 @@ router.get("/all",(req,res)=>{
     });
 });
 
+router.get("/morpion",(req,res)=>{
+    // jeu a integrer
+    console.log('morpion')
+    res.render("morpion");
+});
+
 
 router.get("/coordinate/:name",(req,res)=>{
     const coordinates = require("./data/coordinates");

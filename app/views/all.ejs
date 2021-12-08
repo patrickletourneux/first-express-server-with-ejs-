@@ -1,14 +1,18 @@
 <%- include("partials/header") %>
-<h1>ALL</h1>
-<% let i = 0; %> 
-<% for (const person of coordinates) { %>
-    <% i++ ;%> 
+
+<main>
+
+    <h1>ALL</h1>
+    <% let i = 0; %>
+    <% for (const person of coordinates) { %>
+    <% i++ ;%>
     <div>number <%=i%> ;</div>
 
     <div>Cette personne s'appelle <%=person.name%> </div>
-        <div>son numero de telephone est <%=person.telephone%></div>
-        <div>et habite <%=person.adresse%></div>
-        <div>--------</div>
-<% } %> 
+    <div>son numero de telephone est <%=person.telephone%></div>
+    <div>et habite <%=person.adresse%></div>
+    <div>--------</div>
+    <% } %>
 
+</main>
 <%- include("partials/footer") %>

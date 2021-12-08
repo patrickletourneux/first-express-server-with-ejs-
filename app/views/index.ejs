@@ -1,8 +1,15 @@
 <%- include("partials/header") %>
+<main>
+
+
     <h1>land page</h1>
     <% for (let coordinate of coordinates){ %>
-        <div ><a href="/coordinate/<%=coordinate.name%>"><%=coordinate.name%></a></div>
+    <div><a href="/coordinate/<%=coordinate.name%>"><%=coordinate.name%></a></div>
     <% } %>
     <div>------------------------</div>
-    <div ><a href="/all">All</a></div>
+    <div><a href="/all">All</a></div>
+    <div>---------------------------------------------------------------------</div>
+    <div><a href="/morpion">jeux morpion</a></div>
+</main>
+
 <%- include("partials/footer") %>
