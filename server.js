@@ -4,6 +4,10 @@
 const express = require("express");
 const router = require("./app/router");
 const server = express();
+var bodyParser = require('body-parser');
+
+// pour req.body 
+server.use(bodyParser.urlencoded({extended: true}));
 
 // On va indiquer quel moteur de modèles on utilise
 server.set('view engine', 'ejs');
