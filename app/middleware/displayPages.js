@@ -37,6 +37,13 @@ displayPages = {
         res.render("pixel",{
             pixel
         });
+    },
+    displayGameMorpion : (req,res)=>{
+        const pixel = false;
+        console.log('pixel')
+        res.render("morpion",{
+            pixel
+        });
     }
 }
 
