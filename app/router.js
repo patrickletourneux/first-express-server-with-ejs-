@@ -11,7 +11,7 @@ router.get("/coordinate/:name",displayPages.displayOneCoordinates);
 router.get("/pixel",displayPages.displayGamePixel);
 router.get("/morpion",displayPages.displayGameMorpion);
 
-router.post("/",(res,req,next)=> {
+router.post("/",(req,res,next)=> {
     console.log("post receiv");
     console.log('req.body:', req.body)
     // console.log('req:', req)

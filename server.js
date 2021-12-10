@@ -16,6 +16,7 @@ server.set('views', './app/views');
 server.use(express.static('public'));
 
 // j'indique à ma serveur que j'accepte de recevoir des requêtes POST avec du texte
+server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
 // On ajoute le routeur
 server.use(router);
