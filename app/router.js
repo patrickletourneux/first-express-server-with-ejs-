@@ -13,7 +13,8 @@ router.get("/morpion",displayPages.displayGameMorpion);
 
 router.post("/",(res,req,next)=> {
     console.log("post receiv");
-    // TO DO with middleware
+    console.log('req.body:', req.body)
+    // console.log('req:', req)
     next();
 })
 

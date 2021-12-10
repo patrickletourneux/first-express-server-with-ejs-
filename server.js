@@ -4,10 +4,8 @@
 const express = require("express");
 const router = require("./app/router");
 const server = express();
-var bodyParser = require('body-parser');
 
 // pour req.body 
-server.use(bodyParser.urlencoded({extended: true}));
 
 // On va indiquer quel moteur de modèles on utilise
 server.set('view engine', 'ejs');
@@ -16,6 +14,9 @@ server.set('views', './app/views');
 
 // On va ajouter le dossier public à nos routes
 server.use(express.static('public'));
+
+// j'indique à ma serveur que j'accepte de recevoir des requêtes POST avec du texte
+server.use(express.urlencoded({ extended: true }));
 // On ajoute le routeur
 server.use(router);
 
