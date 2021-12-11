@@ -1,7 +1,6 @@
 <%- include("partials/header") %>
 <main>
-
-
+<% if (locals.connectedUser){%>
     <h1>land page</h1>
     <% for (let coordinate of coordinates){ %>
     <div><a href="/coordinate/<%=coordinate.name%>"><%=coordinate.name%></a></div>
@@ -12,5 +11,5 @@
     <div><a href="/pixel">dessin pixel</a></div>
     <div><a href="/morpion">game morpion</a></div>
 </main>
-
+<%} %>
 <%- include("partials/footer") %>

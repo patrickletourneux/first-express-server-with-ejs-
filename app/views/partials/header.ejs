@@ -20,11 +20,15 @@
 
 <body>
     <header>
-        <div class='partials'>header partial
+        <div class='partials'>header partial     use   Patrick 1234
+            <% if (!locals.connectedUser){%>
             <form method="post">
                 <input type="text" placeholder="id" name="id" id="">
                 <input type="password" placeholder="password" name="password" id="">
                 <button>submit</button>
             </form>
+            <% } else { %>
+                <div>connected user id : <%=locals.connectedUser%></div>
+            <% }%>
         </div> 
     </header>

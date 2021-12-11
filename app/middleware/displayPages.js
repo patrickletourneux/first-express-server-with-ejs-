@@ -1,6 +1,7 @@
 displayPages = {
     displayLandPage : (req,res)=>{
         const coordinates = require("../data/coordinates");
+        // res.locals.connectedUser = 'a';
         res.render("index",{
             coordinates:coordinates
         })
