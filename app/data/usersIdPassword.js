@@ -1,18 +1,28 @@
-const UsersDatas = [
-    {
-        name : 'Patrick',
-        password : 1234
+const UsersDatas = [{
+        id: 'Patrick',
+        password: 1234,
+        role: 'admin'
     },
     {
-        name : 'Benedicte',
-        password : 1111,
+        id: 'a',
+        password: 1,
+        role: 'admin'
     },
     {
-        name : 'Camille',
-        password : 2222
+        id: 'Benedicte',
+        password: 1111,
+        role: 'user'
     },
     {
-        name : 'Bastien',
-        password : 3333
+        id: 'Camille',
+        password: 2222,
+        role: 'user'
+    },
+    {
+        id: 'Bastien',
+        password: 3333,
+        role: 'user'
     }
-]   
+]
+
+module.exports = UsersDatas;
