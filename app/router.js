@@ -7,7 +7,7 @@ router.get("/",displayPages.displayLandPage);
 
 router.post("/",loginManagement.validLogin);
 router.use((req,res,next)=>{
-    res.locals.connectedUser = loginManagement.connectedUser;
+    res.locals.connectedUser = loginManagement.connectedUser.id;
     next();
 });
 

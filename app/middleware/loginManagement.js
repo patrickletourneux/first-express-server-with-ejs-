@@ -9,7 +9,7 @@ const loginManagement = {
         for (let person of usersIdPassword){
             if (person.id ===req.body.id && person.password.toString() ===req.body.password) {
                 console.log('person validee : ',person)
-                loginManagement.connectedUser = person.id;
+                loginManagement.connectedUser.id = person.id;
                 console.log('loginManagement.connectedUser:', loginManagement.connectedUser)
                 res.locals.connectedUser = loginManagement.connectedUser;
                 console.log('res.locals.connectedUser:', res.locals.connectedUser);
