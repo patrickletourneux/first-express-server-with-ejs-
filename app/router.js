@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const displayPages = require("./middleware/displayPages")
-const loginManagement = require("./middleware/loginManagement")
+const displayPages = require("./controllers/mainController")
+const loginManagement = require("./controllers/loginManagement")
 
 router.get("/",displayPages.displayLandPage);
 

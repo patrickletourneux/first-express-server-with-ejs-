@@ -1,6 +1,9 @@
 // ce sera toujours le meme fichier server !
 // https://github.com/O-clock-Zagreus/S03E05-EJS-BNoClock
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 const express = require("express");
 const router = require("./app/router");
 const server = express();
@@ -21,7 +24,8 @@ server.use(express.urlencoded({ extended: true }));
 // On ajoute le routeur
 server.use(router);
 
-const PORT = 3000;
+// const PORT = 3000;
+const PORT = process.env.PORT;
 server.listen(PORT,()=>{
     console.log(`Listening on ${PORT}`);
 });
